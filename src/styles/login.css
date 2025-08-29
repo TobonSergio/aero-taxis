@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #474747 0%, #242424 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 1600px;
+    height: 700px;
+    margin: 50px auto;
+    background-color: #ff8989;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Divisiones izquierda y derecha */
+.login-left, .login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.login-left {
+    position: relative;
+    z-index: 2;
+}
+
+.login-right {
+    background-color: #ff8989;
+    position: relative;
+    z-index: 0;
+}
+
+/* divisor ondulado */
+.wave-divider {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wave-divider svg {
+    width: 1500px;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+/* Formulario de login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px 5px; /* vertical 10px, horizontal 5px */
+    border: none; /* quitamos todos los bordes */
+    border-bottom: 2px solid #ddd; /* solo borde inferior */
+    border-radius: 0; /* eliminamos bordes redondeados */
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+
+.login-form input:focus {
+    border-color: #fd5757;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff8989;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #fc7878;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #ff3131;
+}
+
+.login-right img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
