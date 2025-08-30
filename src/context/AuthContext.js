@@ -1,4 +1,3 @@
-// src/context/AuthContext.js
 import { createContext, useState } from "react";
 
 export const AuthContext = createContext();
@@ -14,7 +13,6 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         localStorage.removeItem("token");
         setToken(null);
-        window.location.href = "/";
     };
 
     return (

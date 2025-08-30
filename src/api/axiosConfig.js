@@ -1,8 +1,8 @@
-// src/api/axiosConfig.js
 import axios from "axios";
 
-const BASE_URL = "https://aero-taxis-backend.onrender.com"; // backend en Render
-
+// URL base de tu backend en Render
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL; // variable que defines en Vercel
+console.log("BASE_URL:", BASE_URL);
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: {
@@ -28,7 +28,7 @@ axiosInstance.interceptors.response.use(
     (error) => {
         if (error.response && error.response.status === 401) {
             localStorage.removeItem("token");
-            window.location.href = "/"; // redirige al login
+            window.location.href = "/login";
         }
         return Promise.reject(error);
     }
