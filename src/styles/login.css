@@ -146,3 +146,54 @@ body {
     height: auto;
     border-radius: 10px;
 }
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 15px;
+    }
+
+    .login-left, .login-right {
+        flex: unset;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    /* Ajustar el divisor ondulado */
+    .wave-divider {
+        display: none; /* ocultamos el ondulado en móviles para simplificar */
+    }
+
+    .login-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .login-right img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+/* Ajuste adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .login-form h2 {
+        font-size: 20px;
+    }
+
+    .login-form input {
+        font-size: 14px;
+        padding: 8px 5px;
+    }
+
+    .login-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
