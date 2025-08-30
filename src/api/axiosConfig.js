@@ -1,9 +1,7 @@
+// src/api/axiosConfig.js
 import axios from "axios";
 
-// URL base de tu backend en Render
-const BASE_URL = "https://aero-taxis-backend.onrender.com";
-console.log("BASE_URL:", BASE_URL); // debe mostrar tu URL de Render
-console.log("BASE_URL en React:", process.env.NEXT_PUBLIC_API_URL);
+const BASE_URL = "https://aero-taxis-backend.onrender.com"; // backend en Render
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
@@ -30,7 +28,7 @@ axiosInstance.interceptors.response.use(
     (error) => {
         if (error.response && error.response.status === 401) {
             localStorage.removeItem("token");
-            window.location.href = "/login";
+            window.location.href = "/"; // redirige al login
         }
         return Promise.reject(error);
     }
