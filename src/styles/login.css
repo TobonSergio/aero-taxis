@@ -159,6 +159,7 @@ body {
         height: auto;
         margin: 20px auto;
         border-radius: 15px;
+        background-color: white;
     }
 
     .login-left, .login-right {
