@@ -18,13 +18,14 @@ body {
     margin: 50px auto;
     background-color: #ff8989;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     position: relative;
 }
 
 /* Divisiones izquierda y derecha */
-.login-left, .login-right {
+.login-left,
+.login-right {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -95,15 +96,18 @@ body {
 
 .login-form input {
     width: 100%;
-    padding: 10px 5px; /* vertical 10px, horizontal 5px */
-    border: none; /* quitamos todos los bordes */
-    border-bottom: 2px solid #ddd; /* solo borde inferior */
-    border-radius: 0; /* eliminamos bordes redondeados */
+    padding: 10px 5px;
+    /* vertical 10px, horizontal 5px */
+    border: none;
+    /* quitamos todos los bordes */
+    border-bottom: 2px solid #ddd;
+    /* solo borde inferior */
+    border-radius: 0;
+    /* eliminamos bordes redondeados */
     outline: none;
     font-size: 16px;
     transition: border-color 0.3s ease;
 }
-
 
 .login-form input:focus {
     border-color: #fd5757;
@@ -146,4 +150,3 @@ body {
     height: auto;
     border-radius: 10px;
 }
-
