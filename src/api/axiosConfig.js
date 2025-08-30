@@ -2,7 +2,7 @@ import axios from "axios";
 
 // URL base de tu backend en Render
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL; // variable que defines en Vercel
-
+console.log("BASE_URL:", BASE_URL);
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: {
