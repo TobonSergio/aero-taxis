@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import axios from "../api/axiosConfig";
 import "../styles/login.css";
@@ -13,7 +14,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("/auth/login", { username, password });
+      const response = await axios.post("/api/auth/login", { username, password });
       const token = response.data.token;
       localStorage.setItem("token", token);
       window.location.href = "/dashboard";

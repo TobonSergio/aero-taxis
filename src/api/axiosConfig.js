@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // URL base de tu backend en Render
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL; // variable que defines en Vercel
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://aero-taxis-backend.onrender.com"; // variable que defines en Vercel
 console.log("BASE_URL:", BASE_URL);
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
@@ -33,5 +33,5 @@ axiosInstance.interceptors.response.use(
         return Promise.reject(error);
     }
 );
-
+//https://aero-taxis-backend.onrender.com
 export default axiosInstance;
