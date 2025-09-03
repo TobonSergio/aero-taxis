@@ -1,0 +1,161 @@
+/* ✅ Importa los estilos comunes que ya definiste en login.css */
+/* Los estilos para .main-container, .wave-divider, etc. son los mismos */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #474747 0%, #242424 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.main-container-register {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 1600px;
+    height: 800px;
+    margin: 50px auto;
+    background-color: #ff8989;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+/* divisor ondulado */
+.wave-divider {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wave-divider svg {
+    width: 1400px;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+
+/* Estilos específicos para el lado izquierdo del registro */
+.register-left {
+  background-color: #ffffff00;
+  padding: 10px 100px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #b60000, #ff5757);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #a10000, #e04a4a);
+}
+
+.error {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.success {
+  color: #28a745;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.register-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.register-right img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .register-left,
+  .register-right {
+    max-width: 100%;
+  }
+
+  .wave-divider {
+    display: none;
+  }
+}
