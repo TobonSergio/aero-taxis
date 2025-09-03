@@ -145,7 +145,7 @@ const Register = () => {
           <div className="google-login-container">
             <p className="or-text">O</p>
             {/* ✅ Añadido target="_blank" aquí */}
-            <a href={`${process.env.NEXT_PUBLIC_API_URL}/oauth2/authorization/google`} className="google-login-btn" target="_blank" rel="noopener noreferrer">
+            <a href={`${process.env.REACT_APP_API_URL}/oauth2/authorization/google`} className="google-login-btn" target="_blank" rel="noopener noreferrer">
               Iniciar sesión con Google
             </a>
           </div>
