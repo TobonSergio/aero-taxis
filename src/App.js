@@ -5,7 +5,8 @@ import Landing from "./pages/landing";
 import Login from "./pages/Login";     
 import Register from "./pages/Register";
 import Dashboard from "./pages/dashboard"; 
-import OAuthCallback from './pages/OAuthCallback'; // Importa el nuevo componente
+import OAuthCallback from './pages/OAuthCallback'; 
+import Verify from "./pages/verify"; // 👈 importa tu componente Verify
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/oauth-callback" element={<OAuthCallback />} />
         <Route path="/dashboard" element={<Dashboard />} /> 
+        <Route path="/verify" element={<Verify />} /> {/* 👈 nueva ruta */}
       </Routes>
     </Router>
   );
