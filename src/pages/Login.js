@@ -3,6 +3,8 @@ import axios from "../api/axiosConfig";
 import "../styles/login.css";
 import logo from "../assets/logo-taxis-rojos-aero-2.jpeg";
 import NavigationBar from "../components/Navbar"; // ✅ Importa el navbar reutilizable
+import { FcGoogle } from "react-icons/fc"; // ✅ Icono de Google
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -81,13 +83,28 @@ const Login = () => {
             </div>
 
             <button type="submit">Entrar</button>
+
             <a href="/forgot-password" className="forgot-password">
               ¿Olvidaste tu contraseña?
             </a>
-            {/* ✅ Nuevo enlace para registrarse */}
+
             <a href="/register" className="register-link">
               ¿No tienes una cuenta? Regístrate
             </a>
+
+            {/* ✅ Iniciar sesión con Google */}
+
+            <div className="google-login-container">
+              <a
+                href={`${process.env.REACT_APP_API_URL}/oauth2/authorization/google`}
+                className="google-login-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FcGoogle className="google-icon" />
+              </a>
+            </div>
+
           </form>
         </div>
 

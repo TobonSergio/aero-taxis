@@ -2,3 +2,32 @@
   background: linear-gradient(135deg, #474747 0%, #242424 100%);
   color: white;
 }
+
+.navbar {
+  background-color: #b60000; /* rojo corporativo, ajusta al gusto */
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar-brand:hover {
+  color: #ef9090; /* color más claro al pasar el mouse */
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+  margin-right: 10px; /* separación entre logo y texto */
+  border-radius: 8px; /* opcional, redondea esquinas */
+}
+
+.brand-text {
+  font-size: 18px;
+}

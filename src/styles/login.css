@@ -114,22 +114,24 @@ body {
 }
 
 .login-form button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    background-color: #ff8989;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #b60000, #ff5757);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out; /* 🔥 transición más fluida */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .login-form button:hover {
-    background-color: #fc7878;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #a10000, #e04a4a);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px); /* 🔥 sutil elevación en vez de agrandar */
 }
 
 .forgot-password {
@@ -162,11 +164,43 @@ body {
   text-decoration: underline;
 }
 
+.google-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.google-login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;   /* ancho del botón */
+  height: 60px;  /* alto del botón */
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%; /* 🔥 lo hace circular */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.google-login-btn:hover {
+  transform: scale(1.1);
+  border-color: #b60000; /* 🔥 borde rojo al pasar el mouse */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.google-icon {
+  font-size: 42px; /* 🔥 tamaño del ícono */
+}
+
+
 /* Responsive para móviles */
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 20px auto;
         border-radius: 15px;
@@ -174,6 +208,7 @@ body {
     }
 
     .login-left, .login-right {
+        background-color: white;
         flex: unset;
         width: 100%;
         justify-content: center;

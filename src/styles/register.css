@@ -94,21 +94,25 @@ body {
 
 button[type="submit"] {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   background: linear-gradient(135deg, #b60000, #ff5757);
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px; /* 🔥 más redondeado */
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
+  transition: all 0.25s ease-in-out; /* 🔥 transición suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* sombra inicial */
+  margin-top: 15px;
 }
 
 button[type="submit"]:hover {
   background: linear-gradient(135deg, #a10000, #e04a4a);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); /* 🔥 más sombra */
+  transform: translateY(-2px); /* 🔥 ligera elevación */
 }
+
 
 .error {
   color: #d9534f;
@@ -144,6 +148,10 @@ button[type="submit"]:hover {
   border-radius: 10px;
 }
 
+.login-link{
+  margin-top: 20px;
+}
+
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -153,6 +161,85 @@ button[type="submit"]:hover {
   .register-left,
   .register-right {
     max-width: 100%;
+  }
+
+  .wave-divider {
+    display: none;
+  }
+}
+
+/* 📱 Responsive para tablets y móviles */
+@media (max-width: 1024px) {
+  .main-container-register {
+    background-color: white;
+    width: 95%;
+    height: auto;
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .register-left {
+    padding: 20px;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .register-right {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .register-right img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .main-container-register {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .register-left {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .register-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .register-right {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .register-right img {
+    max-width: 90%;
+    border-radius: 12px;
   }
 
   .wave-divider {
